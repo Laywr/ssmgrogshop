@@ -70,6 +70,12 @@
 	            name:'散客',
 	            type:'line',
 	            stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
 	            areaStyle: {normal: {}},
 	            data:[${sZongFeiYong12}, ${sZongFeiYong11}, ${sZongFeiYong10}, ${sZongFeiYong9}, 
 	                  ${sZongFeiYong8}, ${sZongFeiYong7}, ${sZongFeiYong6}, ${sZongFeiYong5},
@@ -79,12 +85,7 @@
 	            name:'团队',
 	            type:'line',
 	            stack: '总量',
-	            label: {
-                normal: {
-	                    show: true,
-	                    position: 'top'
-	                }
-	            },
+
 	            areaStyle: {normal: {}},
 	            data:[ ${tZongFeiYong12}, ${tZongFeiYong11}, ${tZongFeiYong10}, ${tZongFeiYong9}, 
 	                   ${tZongFeiYong8}, ${tZongFeiYong7}, ${tZongFeiYong6}, ${tZongFeiYong5},

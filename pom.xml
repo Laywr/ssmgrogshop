@@ -16,23 +16,25 @@
 
     <!--spring Bom 对Spring的依赖包进行版本控制-->
     <!--配置了Spring-framework-bom依赖之后，spring相关的依赖包不需要再写version标签 -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>4.3.8.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework</groupId>-->
+<!--                <artifactId>spring-framework-bom</artifactId>-->
+<!--                <version>4.3.8.RELEASE</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
     <dependencies>
+
+
         <!-- 单元测试 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.12</version>
             <!-- 表示开发的时候引入，发布的时候不会加载此包 -->
             <scope>test</scope>
         </dependency>
@@ -42,92 +44,110 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- spring注入包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- 切片包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- Beans包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- 容器包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- 核心包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
+            <version>5.3.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- spring事务管理包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- 数据库连接包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- 容器依赖包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- 表达式包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!--spring-instrument包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-instrument</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- spring文本项目包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- Springmvc包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!--spring-websocket包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-websocket</artifactId>
+            <version>5.3.0</version>
         </dependency>
 
         <!--Spring消息包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jms</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!--Spring信息包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-messaging</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!--Spring对象映射包 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
+            <version>5.3.0</version>
         </dependency>
         <!-- spring end -->
 
@@ -153,7 +173,7 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.4.2</version>
+            <version>3.4.6</version>
         </dependency>
         <!-- spring+mybatis整合包 -->
         <dependency>
@@ -167,7 +187,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.42</version>
+            <version>6.0.6</version>
         </dependency>
 
         <!-- jstl标签 -->
@@ -194,13 +214,13 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>1.7.2</version>
+            <version>2.8.2</version>
         </dependency>
         <!-- servlet相关 -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -212,6 +232,17 @@
     </dependencies>
 
     <build>
+
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
 
         <!--xml文件打包-->
         <resources>
